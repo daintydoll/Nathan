@@ -34,6 +34,40 @@
         <img src="https://raw.githubusercontent.com/daintydoll/Nathan/refs/heads/main/Untitled4_20250401114921.png" alt="Cake Image">
     </div>
 
-    <script src="script.js"></script>
+    <!-- JavaScript code directly in index.html -->
+    <script>
+        // Get the popup elements and icons
+        const popup1 = document.getElementById("popup1");
+        const popup2 = document.getElementById("popup2");
+        const icon1 = document.querySelector(".icon1");
+        const icon2 = document.querySelector(".icon2");
+
+        // Show the first popup when icon1 is clicked
+        icon1.onclick = function() {
+            popup1.style.display = "block";
+        };
+
+        // Show the second popup when icon2 is clicked
+        icon2.onclick = function() {
+            popup2.style.display = "block";
+        };
+
+        // Close the popups
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = "none";
+        }
+
+        // Optional: Close the popup if clicked outside of it
+        window.onclick = function(event) {
+            if (event.target === popup1) {
+                popup1.style.display = "none";
+            }
+            if (event.target === popup2) {
+                popup2.style.display = "none";
+            }
+        };
+    </script>
+
 </body>
 </html>
