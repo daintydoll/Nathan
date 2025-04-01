@@ -35,21 +35,26 @@ body {
 
 /* Popup styling */
 .popup {
-    display: none;
+    display: none; /* Initially hidden */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #000;
+    z-index: 9999;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;  /* Rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    text-align: center;
 }
 
 .popup img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: If you want the image to also have rounded corners */
+    width: 300px; /* Adjust size as needed */
 }
 
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
